@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Solara Bay — an open-world crime game</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div id="hud-top-left" class="hud-panel">
+    <div id="health-row">
+      <div id="health-bar"><div id="health-fill"></div></div>
+      <span id="health-text">100</span>
+    </div>
+    <div id="money">$150</div>
+    <div id="ammo">Ammo 24</div>
+  </div>
+  <div id="hud-top-right" class="hud-panel">
+    <div id="stars">☆☆☆☆☆</div>
+    <div id="speed"></div>
+  </div>
+  <div id="objective" class="hud-panel">Welcome to Solara Bay.</div>
+  <div id="toast"></div>
+  <div id="hint"></div>
+  <canvas id="minimap" width="200" height="150"></canvas>
+</div>
+
+<div id="screen-start" class="screen">
+  <div class="game-title">SOLARA BAY</div>
+  <div class="game-subtitle">A SUN-SOAKED OPEN-WORLD CRIME GAME</div>
+  <p class="story">You are Vic's new wheelman in Solara Bay, a coastal city that never
+  sleeps. Steal cars, outrun the cops, run Vic's jobs, and take the Big
+  Score. The bay is yours if you can hold it.</p>
+  <div class="controls">
+    <b>WASD / Arrows</b> — walk &amp; drive &nbsp;·&nbsp; <b>Shift</b> — run<br>
+    <b>E</b> — steal / exit car, save at the Hideout &nbsp;·&nbsp; <b>Space</b> — punch / handbrake<br>
+    <b>Mouse + Click</b> — aim &amp; shoot (drive-by from a car) &nbsp;·&nbsp; <b>Esc</b> — pause &nbsp;·&nbsp; <b>M</b> — mute
+  </div>
+  <button id="btn-start" class="btn">START</button>
+  <button id="btn-continue" class="btn secondary">CONTINUE</button>
+  <div class="small">Progress saves at the Hideout. Wanted stars fade when you stay hidden — or repaint at Pay N Spray.</div>
+</div>
+
+<div id="screen-pause" class="screen hidden">
+  <h2>PAUSED</h2>
+  <p>Solara Bay waits for no one. Well — right now it does.</p>
+  <button id="btn-resume" class="btn">RESUME</button>
+  <button id="btn-restart" class="btn secondary">RESTART</button>
+</div>
+
+<div id="screen-busted" class="screen hidden">
+  <h2>BUSTED</h2>
+  <p>The Solara Bay PD caught up with you. You lose $150 and the heat is off — for now.</p>
+  <button id="btn-respawn-busted" class="btn">BACK ON THE STREETS</button>
+</div>
+
+<div id="screen-wasted" class="screen hidden">
+  <h2>WASTED</h2>
+  <p>That is the end of the line. The hospital patched you up — minus $100.</p>
+  <button id="btn-respawn-wasted" class="btn">BACK ON THE STREETS</button>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/city.js"></script>
+<script src="js/player.js"></script>
+<script src="js/vehicles.js"></script>
+<script src="js/peds.js"></script>
+<script src="js/police.js"></script>
+<script src="js/missions.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
